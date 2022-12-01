@@ -13,6 +13,7 @@
 		5009829F2937967B007AB0CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5009829D2937967B007AB0CE /* Main.storyboard */; };
 		500982A12937967C007AB0CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500982A02937967C007AB0CE /* Assets.xcassets */; };
 		500982A42937967C007AB0CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500982A22937967C007AB0CE /* LaunchScreen.storyboard */; };
+		500982AC293879D2007AB0CE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500982AB293879D2007AB0CE /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		500982A02937967C007AB0CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500982A32937967C007AB0CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500982A52937967C007AB0CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500982AB293879D2007AB0CE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				500982972937967B007AB0CE /* AppDelegate.swift */,
 				500982992937967B007AB0CE /* SceneDelegate.swift */,
-				5009829B2937967B007AB0CE /* ViewController.swift */,
 				5009829D2937967B007AB0CE /* Main.storyboard */,
+				5009829B2937967B007AB0CE /* ViewController.swift */,
+				500982AB293879D2007AB0CE /* SettingViewController.swift */,
 				500982A02937967C007AB0CE /* Assets.xcassets */,
 				500982A22937967C007AB0CE /* LaunchScreen.storyboard */,
 				500982A52937967C007AB0CE /* Info.plist */,
@@ -141,6 +144,7 @@
 				5009829C2937967B007AB0CE /* ViewController.swift in Sources */,
 				500982982937967B007AB0CE /* AppDelegate.swift in Sources */,
 				5009829A2937967B007AB0CE /* SceneDelegate.swift in Sources */,
+				500982AC293879D2007AB0CE /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
