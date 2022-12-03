@@ -14,7 +14,7 @@
   return =
  }
  
- hogehoge が メソッド名
+ hogeHoge が メソッド名
  _　が　ラベル、設定しない場合は"_"とかく　ラベルによって引数を保管できる？
  huga が 第一引数　:Int が第一引数の型指定
  hogo　が　第二引数　:Str が第二引数の型指定
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     //Timerクラスを利用すると、指定した時間に何らかの処理を実行したり、定期的に繰り返し処理を行なったりすることができる。
     //?をつけているのは、「オプショナル型」つまり、Timerクラスから呼び出した値が空でもエラーをださずに進めて良い
     //(代わりにnilという戻り値を渡す)、という型指定をしている。
-    //既に型を宣言済み, 型推論で割当炭の定数/関数についても、名前の後ろに?をつけるとnilを受け入れるようになる。こちらはラップ処理と呼ぶ
+    //既に型を宣言済み, 型推論で割当炭の定数/関数についても、名前の後ろに?をつけるとnilを受け入れるようになる。こちらは アンラップ処理と呼ぶ
     //なお、?でオプショナル型指定をした場合、演算処理を行うことができない(Int型でなくオプショナル型だから,型推論もしてくれない)
-    //?でオプショナル型にした値を演算に使いたい場合、その定数/変数に!をつければ演算可能になる。これをアンラップと呼ぶ
+    //?でオプショナル型にした値を演算に使いたい場合、その定数/変数に!をつければ演算可能になる。
     //なお、値が空でもエラーで強制停止せず、別の処理に逃したいときは"if let 任意の定数名　= 対象の定数/変数 {}　"でアンラップすることもできる
     //(対象の定数、変数に値がある場合は、{}内の任意の処理を行い、戻り値を任意の定数名に保管することで、値があることを保証することができる。)
     //逆に、定数、変数がからの場合は、{}内の処理は行われないし、戻り値も定数名に保管されないので、そこで値があったかなかったかを判断できる
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         
         //viewDidLoadは、このViewControllerが呼び出されるときに1度だけ実行される。
         //UserDefaultsには、アプリで利用する値を保存できる。
-        //アプリを停止して、再度起動させたときに、UserDefaultsを血用して保存していた値を利用する。
+        //アプリを停止して、再度起動させたときに、UserDefaultsを使用して保存していた値を利用する。
         //データを保存して復元できるようにすることを「データの永続化」と呼び、キー(settingKey)と
         //記録したい値（秒数）を指定することで、そのキーを使って自由に値を取り出したり、書き換えたりすることができる。
         
@@ -200,6 +200,18 @@ class ViewController: UIViewController {
             count = 0
             //タイマー停止
             timer.invalidate()
+             
+            //カスタマイズ編　ダイアログを作成
+            //各引数　title message preferredStyle　のうち、prefferedStyleはAlert(ポップアップ)か
+            //ActionSheet(下からスライドして表示されるダイアログ)を選択する。
+            let alertController = UIAlertController(title: "終了", message: "タイマー終了時間です", preferredStyle: .alert)
+            //ダイアログに表示させるOKボタンを作成
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            //アクションを追加 インスタンス化したdefaultActionをalertControllerに渡す
+            alertController.addAction(defaultAction)
+            //ダイアログの表示　presentが表示する　というメソッド
+            present(alertController, animated: true, completion: nil)
+             
         }
     }
 
